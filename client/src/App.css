@@ -1,0 +1,63 @@
+body{
+  width: 100vw;
+  height: 100vh;
+}
+#root{
+  width: 100%;
+  height: 100%;
+}
+
+.App{
+width: 100%;
+height: 100%;
+}
+.routes{
+  width: 100%;
+  height: 100%;
+}
+.inicio{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.header1{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  background-color: blue;
+  height: fit-content;
+  color: white;
+}
+.login_trial{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 30%;
+}
+.login {
+margin: 8px;
+
+}
+.trial{
+  color: white;
+  background-color: black;
+}
+
+.header2{
+  width: 100%;
+}
+
+
+
+
+.placeholder{
+background-image: url("../public/asset/placeholder.png");
+}
