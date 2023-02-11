@@ -6,7 +6,7 @@ function Contenido() {
         <div className="contenido">
             <div>
                 <div className="placeholder">
-
+                    <h3>SERIES</h3>
                 </div>
                 <div>
                     <p className="popular_title">Popular Series</p>
@@ -14,7 +14,7 @@ function Contenido() {
             </div>
             <div>
                 <div className="placeholder">
-
+                    <h3>MOVIES</h3>
                 </div>
                 <div>
                     <p className="popular_title">Popular Movies</p>

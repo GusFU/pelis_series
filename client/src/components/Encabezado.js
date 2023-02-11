@@ -13,10 +13,13 @@ function Encabezado() {
                     <button className="trial">Start your free trial</button>
                 </div>
             </div>
-            <div className="hearder2">
+            <div className="header2">
                 <h2>
                     Populars Titles
                 </h2>
+                <div className="login_trial">
+
+                </div>
             </div>
         </div>
     )
