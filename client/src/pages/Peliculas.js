@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from "react";
-
-function Peliculas (){
+import Encabezado from "../components/Encabezado"
+import Pie_de_pagina from "../components/Pie_de_pagina"
+import Pelicula from "../components/Pelicula";
+function Peliculas() {
 
     return (
         <div>
-
+            <Encabezado />
+            <Pelicula/>
+            <Pie_de_pagina />
         </div>
     )
 }

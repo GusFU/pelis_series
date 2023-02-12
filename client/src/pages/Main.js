@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { Routes, Route } from "react-router-dom";
 import Inicio from "./Inicio"
-
+import Series from "./Series"
+import Peliculas from "./Peliculas"
 
 class Main extends Component {
     constructor(props) {
@@ -13,7 +14,8 @@ class Main extends Component {
         <div className="routes">
             <Routes>
                 <Route path="/" element={<Inicio />} />
-                
+                <Route path="/series" element={<Series />} />
+                <Route path="/peliculas" element={<Peliculas />} />
             </Routes>
         </div>
         );
