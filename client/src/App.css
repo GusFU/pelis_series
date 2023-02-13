@@ -1,23 +1,26 @@
 *{
   margin: 0;
+  padding: 0;
 }
 body{
+
+
   width: 100vw;
   height: 100vh;
   
 }
 #root{
-  width: 100%;
-  height: 100%;
+  min-width: 100vh;
+  min-height: 100vh;
 }
 
 .App{
-width: 100%;
-height: 100%;
+width: 100vw;
+height: 100vh;
 }
 .routes{
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 }
 
 
@@ -80,7 +83,7 @@ margin-right: 24px;
 /* contenido */
 .contenido{
   display: flex;
-  width: 80%;
+  width: 100%;
   height: 50%;
   justify-content: flex-start;
 }
@@ -128,4 +131,57 @@ margin-right: 24px;
   width: 50%;
 }
 /* pie de pagina */
+/* pelicula */
+.contenido_pelis{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100vw;
+  margin: 10px;
+}
+.peli-serie{
+  margin: 8px;
+  max-width: 150px;
+}
+
+.caratula{
+  max-width: 100%;
+}
+.caratula:hover{
+ border: solid;
+ border-radius: 25%;
+  border-color: white;
+  opacity: 50%;
+}
+/* popup */
+.fondo_popup{
+  position: absolute;
+  z-index: 1001;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.popup{
+  background-color: black;
+  color: aliceblue;
+  max-width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 8px;
+}
+
+.caratula_popup{
+  width: 40%;
+  margin: 6px;
+}
+/* popup */
+/* pelicula */
 /* pagina de inicio */

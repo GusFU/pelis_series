@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import useFetch from "../hooks/fetch";
 import Modal from "./Modal";
-function Pelicula() {
+function Serie() {
     const { data, pending, error, execute } = useFetch()
     const [dataActive, setDataActive] = useState("")
     const [active, setActive] = useState(true);
     const info = {
-        programType: "movie",
+        programType: "series",
         releaseYear: 2010
     }
 
@@ -33,10 +33,10 @@ function Pelicula() {
                 )
             })}
             {!dataActive ? "" :
-                <Modal item={dataActive} cerrar={setDataActive}/>}
+               <Modal item={dataActive} cerrar={setDataActive}  />}
 
         </div>
     )
 }
 
-export default Pelicula
+export default Serie
