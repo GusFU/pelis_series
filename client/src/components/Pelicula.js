@@ -1,31 +1,35 @@
 import React, { useState, useEffect } from "react";
 import useFetch from "../hooks/fetch";
+import useReleaseYear from "../hooks/releaseyear";
 import Modal from "./Modal";
-function Pelicula() {
+function Pelicula(props) {
     const { data, pending, error, execute } = useFetch()
     const [dataActive, setDataActive] = useState("")
-    const [active, setActive] = useState(true);
-    const info = {
-        programType: "movie",
-        releaseYear: 2010
-    }
+    const {releaseyear, escoger}= useReleaseYear()
+ 
 
     useEffect(() => {
-        execute(info)
+        execute()
     }, []);
+  
+
     useEffect(() => {
-        if (data) {
-        }
-    }, [data]);
+       
+        if (data){escoger(data, props.year, props.type)}
+        
+     }, [data]);
 
-
-
+     useEffect(() => {
+       // console.log(releaseyear)
+     }, [releaseyear]);
 
     return (
         <div className="contenido_pelis">
-            {pending ? <p>loading...</p> : error ? <p>Oooops error</p> : !data ? "" : (data).map(item => {
+             {pending ? <p>loading...</p> : ""}
+             {error ? <p>Oooops error</p> : ""}
+             {!releaseyear ? "" : (releaseyear).map((item, id) => {//separar terniario
                 return (
-                    <div className="peli-serie" onClick={() => { setDataActive(item) }}>
+                    <div className="peli-serie" key={id} onClick={() => { setDataActive(item) }}>
 
                         <img className="caratula" src={`${item.images["Poster Art"].url}`} />
                         <p className="popular_title">{item.title}</p>
@@ -33,7 +37,7 @@ function Pelicula() {
                 )
             })}
             {!dataActive ? "" :
-                <Modal item={dataActive} cerrar={setDataActive}/>}
+                <Modal item={dataActive} cerrar={setDataActive}/>} 
 
         </div>
     )

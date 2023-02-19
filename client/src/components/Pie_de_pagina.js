@@ -4,8 +4,8 @@ function Pie_de_pagina() {
 
     return (
         <div className="pie_de_pagina">
-            <div>
-                <p>Home  |  Terms and Conditions  |  Privacy Polity  |  Collection Statement  |  Help  |  Manage Account</p>
+            <div className="copy">
+                <p>Home  |  Terms and Conditions  |  Privacy Polity  |  Collection Statement  |  Help  |  Manage Account</p>{/* poner dentro de un div y centrar */}
                 <p>Copyright © 2016 DEMO Streaming. All Right Reserved</p>
             </div>
             <div className="pie-img">
@@ -17,7 +17,7 @@ function Pie_de_pagina() {
                 </div>
                 <div className="pie-imgs">
                     <img className="img-store" src="./asset/app-store.svg"></img>
-                    <img className="img-store" src="./asset/play-store.svg"></img>
+                    {<img className="img-store" src="./asset/play-store.svg"></img> }
                     <img className="img-store" src="./asset/windows-store.svg"></img>
                 </div>
             </div>

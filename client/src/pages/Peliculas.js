@@ -7,7 +7,7 @@ function Peliculas() {
     return (
         <div>
             <Encabezado />
-            <Pelicula/>
+            <Pelicula year={2010} type="movie"/>
             <Pie_de_pagina />
         </div>
     )
